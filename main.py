@@ -1,10 +1,11 @@
 swords = []
-num = int(input("number: "))
-enemy = input("Unscramble: ")
+num = int(input("Number of words to form: "))
+enemy = input("Word to unscramble: ")
 
 with open("dict.txt", "r") as f:
     for word in f:
         grab = []
+        enemy = enemy.lower()
         scram_word = [x for x in enemy.strip()]
         for char in word.strip():
             if char in scram_word:
